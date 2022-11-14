@@ -4974,6 +4974,72 @@ a.badge:focus {
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
+/*.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.active, .collapsible:hover {
+  background-color: #555;
+}
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}*/
+details > summary {
+/*  padding: 4px;*/
+/*  width: 200px;*/
+/*  background-color: #eeeeee;*/
+/*  border: none;*/
+/*  box-shadow: 1px 1px 2px #bbbbbb;*/
+  color: #ED1076;
+  cursor: pointer;
+}
+summary:hover{
+    color: #AE0046;
+    text-decoration: underline;}
+    
+
+details > p {
+  display: block;
+/*  background-color: #eeeeee;*/
+  position: relative;
+  display: block;
+  padding: 0px 15px;
+/*  padding: 4px;*/
+  margin: 0;
+/*  box-shadow: 1px 1px 2px #bbbbbb;*/
+}
+/*details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+    cursor:pointer;
+}
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+/*    border-bottom: 1px solid #aaa;*/
+    margin-bottom: .5em;
+}*/
+
 .jumbotron {
   padding-top: 0px;
   padding-bottom: 30px;
