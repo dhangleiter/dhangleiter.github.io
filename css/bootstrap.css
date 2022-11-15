@@ -25,9 +25,10 @@ main,
 menu,
 nav,
 section,
-summary {
-  display: block;
-}
+/*summary {*/
+/*  display: block;*/
+/*  font-size: 20px;*/
+/*}*/
 audio,
 canvas,
 progress,
@@ -1286,6 +1287,7 @@ h2,
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+  padding-top:10px;
 /*  color: #ED1076;*/
 }
 h3,
@@ -5000,6 +5002,7 @@ details > summary {
 /*  background-color: #eeeeee;*/
 /*  border: none;*/
 /*  box-shadow: 1px 1px 2px #bbbbbb;*/
+  font-size: 20px;
   color: #ED1076;
   cursor: pointer;
 }
@@ -5015,9 +5018,25 @@ details > p {
   display: block;
   padding: 0px 15px;
 /*  padding: 4px;*/
-  margin: 0;
+  margin: 0 0 10px;
 /*  box-shadow: 1px 1px 2px #bbbbbb;*/
 }
+
+
+/*summary {
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}*/
+/*summary:focus {
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
+}*/
+/*summary::-webkit-details-marker {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+  color: transparent;
+}
+summary:focus::-webkit-details-marker {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/down-arrow.svg);
+}*/
+
 /*details {
     border: 1px solid #aaa;
     border-radius: 4px;

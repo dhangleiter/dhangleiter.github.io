@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/due3qzw.css">
     <link href="css/bootstrap.css" rel="stylesheet">
 
+
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
-
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -78,7 +78,7 @@
             I am currently a Hartree Postdoctoral Fellow @ the <i>Joint Center for Quantum Information and Computer Science</i> of the University of Maryland & NIST. 
             I did my Ph.D. @ <i>Freie Universität Berlin</i> in Jens Eisert's group, and  studied physics, philosophy, and mathematics @ Konstanz, Oxford and Munich.<br><br>
 
-            Please feel free to email me at <a href="mailto:dhang@umd.edu">dhang@umd.edu</a>.
+            I am always happy to talk about my work and to answer any questions you might have at <a href="mailto:dhang@umd.edu">dhang@umd.edu</a>.
           </p>
 
         </div>
@@ -93,31 +93,176 @@
         <div class="col-md-8">
 
           <h2 id="research"><span>My Research</span><span><a href="#top"><img src="img/arrow.png" height=30px></a></span></h2>
-          <p>
+      <p>
             
+       What are the computational limitations on predicting and understanding the physical world? How are these limitations manifested in practice? Vice versa, can we harness the complexity of quantum systems as computing devices in order to overcome those limitations and learn about unknown physics? 
+      </p>
+
+      <p>
+        These are the big guiding questions of my research. While solving specific problems I try to keep in mind the overarching motivation for what I am doing. Specifically, my research can be categorized by the following questions&mdash;all centered around the role of computing in physics and the role of physics in computing. 
+
+
+      </p>
+      <p>
+      <details>
+          <summary>What is the computational power of quantum systems? </summary>
         
-            
-            What are the computational limitations on predicting and understanding the physical world? How are these limitations manifested in practice? Vice versa, can we harness the complexity of quantum systems as computing devices in order to overcome those limitations and learn about hitherto unknown physics? To shed light on those questions, I study what one might call quantum computational physics. 
+      <p>
+        It is an insight of Paul Benioff, Richard Feynman, David Deutsch and others in the late 20th century that we can harvest precise control of quantum systems computationally: Controlled quantum devices allow for efficient simulations and computations in cases in which any classical algorithm would require exponential time. But what does that mean in practice? Today, we are at an extremely exciting stage. We---or, rather, extremely clever physicists and engineers in well organized labs---can now actually control individual quantum systems to the extent required for quantum computers. Not on the required scale quite yet, but it's a start and we are getting there. Now, you will be wondering: Can we already perform computations that cannot be done on any of our classical supercomputers then? 
+      </p>
 
-          <details>
-              <summary><h4>What is the computational power of quantum systems? </h4></summary>
+      <p>
+        This is precisely one of the questions I have been working on over the last years. In particular, I have worked extensively on developing so-called <i>quantum random sampling</i> schemes. Implementations of such schemes on the available hardware&mdash;so the argument&mdash;demonstrates that quantum computers are real: They are <i>really</i> hard to simulate on our classical supercomputers and we have deep reasons in complexity theory to believe that this will get exponentially harder, as we build larger and larger quantum computers.
+      </p>
 
-              <p> It is an insight of Paul Benioff, Richard Feynman, David Deutsch and others in the late 20th century that we can harvest precise control of quantum systems computationally: Controlled quantum devices allow for efficient simulations and computations in cases in which any classical algorithm would require exponential time. But what does that mean in practice? Today, we are at an extremely exciting stage. We---or, rather, extremely clever physicists and engineers in well organized labs---can actually control individual quantum systems to the extent required for quantum computers. Not on the required scale quite yet, but it's a start. You'll be wondering: Can we actually perform computations that cannot be done on any of our classical supercomputers then? </p>
-              <br>
+      <p>
+        If you want to learn more about this, I recommend the following papers of mine. 
+        <ul>
+          <li>
+          <b>Introductory overview:</b> <a href="https://arxiv.org/abs/2206.04079" target="_new" >  
+            Computational advantage of quantum random sampling (2022) 
+          </a>
+        </li>
+        <li>
+         <!-- <b>Technical results:</b>  -->
+         <a href="http://www.arxiv.org/abs/1908.08069" target="_new"> Closing gaps of a quantum advantage with short-time Hamiltonian dynamics (2020)</a>
+        </li>
 
-              <p>
-              This is precisely one of the questions I have been working on over the last years. 
-                - Architectures
-                - Xanadu
-              </p>
-          </details>
+        <li>   
+          <!-- <b>New proposal:</b>  -->
+          <a href="http://arXiv.org/abs/2102.12474" target="_new">Quantum computational advantage via high-dimensional Gaussian Boson Sampling (2022)
+          </a> &mdash; implemented <a https://www.nature.com/articles/s41586-022-04725-x>here</a>. 
+        </li>
+        </ul>
+      </p>
+              
 
-          </p>
 
-        </div>
-        <div class="col-md-2">
-        </div>
-      </div>  
+      </details>
+      </p>
+          
+      <p>
+      <details>
+        <summary>How can we characterize quantum devices and verify quantum computations? </summary>
+
+  <h4>Verification</h4>
+        
+        <p>
+Is it possible to verify the outcomes of a quantum computation efficiently using only classical computation? After all, we expect that no classical computer can solve all the problems that quantum computers can solve. So there is no way for us to just compare the results of two computations. This is one of the deep questions in the theory of quantum computing. We now know that this is indeed possible using a <a href="https://arxiv.org/abs/1804.01082">complicated protocol</a> designed for verifying a quantum computation done by some remote server. But is verification possible in simple scenarios, for example, when we only receive samples from the output of a quantum computation? We might also be able to exploit some uniquely quantum properties of a quantum computation, for example, that we can look at a quantum state from different angles or&mdash;technically speaking&mdash;measure it in different bases. In which scenarios is verification possible and in which scenarios is it not? What are the minimal resources required in a given scenario? 
+</p>
+
+<p>
+This question has brought me into the field of quantum computing to begin with and it still fascinates me today. Over the course of the past years, I have studied that question specifically in the context of analog quantum simulations and quantum random sampling. If you want to read more about it, I recommend the following papers and talk. 
+</p>
+
+<ul>
+          <li>
+          <a href="https://arxiv.org/abs/1602.00703" target="_new" >  
+            Direct certification of a class of quantum simulations (2017)
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://arxiv.org/abs/1812.01023" target="_new" >  
+            Sample complexity of device-independently certified "quantum supremacy" (2019)
+          </a>
+        </li>
+
+        <li>
+          <b>Talk:</b> <a href="https://www.youtube.com/watch?v=NWOZs5mAfYk">(How) can we verify quantum supremacy? </a>
+        </li>
+</ul>
+
+<h4>Characterization </h4>
+
+<p>
+Closely related to the verification of quantum simulations and computations is the question, how we can most resource-efficiently <i>characterize</i> quantum devices. While in verification we are just interested in a Yes/No answer whether or not the computation succeeded, in quantum characterization we actually want to know what happened in the device. Most importantly: what, if anything, went wrong? Such answers are crucial to engineering quantum devices and making them more and more precise. What exactly we want to learn about the device will depend a lot on the specific setting. 
+</p>
+<p>
+While we have many tools available for characterizing digital computations, this is much less true for analog simulators. The setting I am currently most interested in are systems with particle-number conserving dynamics. I think of such systems as being analogous to digital quantum computations where we compose individual local gates, but now we compose the dynamics of individual particles. For a detailed study on how to characterize the dynamics of such particles in practice I recommend the following paper and talk.  
+</p>
+<ul>
+        <li>
+        <a href="https://arxiv.org/abs/2108.08319" target="_new" >  
+          Precise Hamiltonian identification of a superconducting quantum processor 
+        </a>
+      </li>
+      <li>
+          <b>Talk:</b> <a href="https://www.youtube.com/watch?v=WCv4gQT_AM4">Precisely identifying Hamiltonians from dynamical data </a>
+        </li>
+       
+</ul>
+
+<h4> Learning </h4>
+
+<p>
+Another notion that is closely related to verification and characterization is learning. Learning tasks can have many different goals, but what unites them is that we want to find a model that fits some data which is given to us. We don't require that this model is <i>true</i> in that it has a theoretical grounding and uniquely describes the data within our theory. Learning is intrinsically data-driven: We simply want to reproduce certain characteristic features of the data. For example, in a classification task, we might want to divide our data, say images, into different categories and then, given a new  image, decide into which category it fits. Or we might want to be able to generate new images that are similar to the ones given to us. An interesting question is whether quantum algorithms can be better at learning tasks than classical ones. We showed that the answer to this question is a resounding "Yes"&mdash;albeit for a very artificial task (it's theory, that's allowed!).
+</p>
+
+<ul>
+        <li>
+        <a href="https://arxiv.org/abs/2007.14451" target="_new" >  
+          On the Quantum versus Classical Learnability of Discrete Distributions (2021)
+        </a>
+      </li>
+      <li>
+          <b>Talk:</b> <a href="https://www.youtube.com/watch?v=hDzSocQO92g">Classical versus quantum learning of discrete distributions </a>
+        </li>
+       
+</ul>
+    </p>
+        
+      </details>
+      </p>
+
+      <p>
+      <details>
+        <summary>What are the physical mechanisms that obstruct our simulations?  </summary>
+
+      <p>  </p>
+      <ul>
+        <li>
+          <a href="https://arxiv.org/abs/1906.02309" target="_new" >  
+          Easing the Monte Carlo sign problem (2020)
+          </a>
+        </li>
+
+        <li>
+          <b>Talk:</b> <a href="https://www.youtube.com/watch?v=YdxnD392Otw" target="_new" >  
+          The Quantum Sign Problem
+          </a>
+        </li>
+
+      </ul>
+      </details>
+      </p>
+
+      <p>
+      <details>
+        <summary>What does quantum computing mean for how we do science? </summary>
+
+        <p>  </p>
+        <ul>
+        <li>
+          <b>Book:</b> <a href="https://link.springer.com/book/10.1007/978-3-030-87216-8" target="_new"> 
+              Analogue Quantum Simulation: A New Instrument for Scientific Understanding (2022).
+            </a>         </li>
+
+        <li>
+          <a href="https://arxiv.org/abs/2112.01105" target="_new">How to engineer a quantum wavefunction (2021)
+          </a>
+        </li>
+
+      </ul>
+
+  
+      </details>
+      </p>
+      
+    </div>
+    <div class="col-md-2">
+    </div>
+    </div>  
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-2">
@@ -182,7 +327,7 @@
             PhD Thesis. Freie Universität Berlin (2021). 
             preprint arXiv:2012.07905.</a>
 
-        <h3> Review articles and perspectives </h3>
+        <h3> Review articles & Perspectives </h3>
 
         <a href="https://arxiv.org/abs/2206.04079" target="_new" class="list-group-item">  
           <b>Computational advantage of quantum random sampling</b> <i> with</i> Jens Eisert. <br>  
@@ -236,13 +381,13 @@
 
         <h3> Journal articles </h3>
 
-        <a href="href{https://arxiv.org/abs/2204.08389" target="_new" class="list-group-item">   <b>Boson Sampling for Generalized Bosons</b> <i>with</i> En-Jui Kuo, Yijia Xu, Andrey Grankin, Mohammad Hafezi. <br>
+        <a href="https://arxiv.org/abs/2204.08389" target="_new" class="list-group-item">   <b>Boson Sampling for Generalized Bosons</b> <i>with</i> En-Jui Kuo, Yijia Xu, Andrey Grankin, Mohammad Hafezi. <br>
         <i>In</i> Phys. Rev. Research <b>4</b>, 043096 (2022). 
         preprint arXiv:2204.08389.
         </a>
 
 
-        <a href="href{http://arXiv.org/abs/2102.12474" target="_new" class="list-group-item">   <b>Quantum computational advantage via high-dimensional Gaussian Boson Sampling</b> <i>with</i> Abhinav Deshpande, Arthur Mehta, Trevor Vincent, Nicolás Quesada, Marcel Hinsche, Marios Ioannou, Lars Madsen, Jonathan Lavoie, Haoyu Qi, Jens Eisert, Bill Fefferman, Ish Dhand. <br> 
+        <a href="http://arXiv.org/abs/2102.12474" target="_new" class="list-group-item">   <b>Quantum computational advantage via high-dimensional Gaussian Boson Sampling</b> <i>with</i> Abhinav Deshpande, Arthur Mehta, Trevor Vincent, Nicolás Quesada, Marcel Hinsche, Marios Ioannou, Lars Madsen, Jonathan Lavoie, Haoyu Qi, Jens Eisert, Bill Fefferman, Ish Dhand. <br> 
         <i>In</i> Science Advances <b>8</b>(1), eabi7892 (2022).
         preprint arXiv:2102.12474.<br>
         </a>

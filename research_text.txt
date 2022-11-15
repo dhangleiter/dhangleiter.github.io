@@ -1,26 +1,45 @@
-What are the computational limitations on predicting and understanding the physical world? How are these limitations manifested in practice? Vice versa, can we harness the complexity of quantum systems as computing devices in order to overcome those limitations and learn about hitherto unknown physics? To shed light on those questions, I study what one might call quantum computational physics. 
+What are the computational limitations on predicting and understanding the physical world? How are these limitations manifested in practice? Vice versa, can we harness the complexity of quantum systems as computing devices in order to overcome those limitations and learn about unknown physics? 
+
+These are the big guiding questions of my research. While solving specific problems I try to keep in mind the overarching motivation for what I am doing. Specifically, my research can be categorized by the following questions---all centered around the role of computing in physics and the role of physics in computing. 
+
 
 What is the computational power of quantum systems? 
 ---------------------------------------------------
 
-It is an insight of Paul Benioff, Richard Feynman, David Deutsch and others in the late 20th century that we can harvest precise control of quantum systems computationally: Controlled quantum devices allow for efficient simulations and computations in cases in which any classical algorithm would require exponential time. But what does that mean in practice? Today, we are at an extremely exciting stage. We---or, rather, extremely clever physicists and engineers in well organized labs---can actually control individual quantum systems to the extent required for quantum computers. Not on the required scale quite yet, but it's a start. You'll be wondering: Can we actually perform computations that cannot be done on any of our classical supercomputers then? <br>
+It is an insight of Paul Benioff, Richard Feynman, David Deutsch and others in the late 20th century that we can harvest precise control of quantum systems computationally: Controlled quantum devices allow for efficient simulations and computations in cases in which any classical algorithm would require exponential time. But what does that mean in practice? Today, we are at an extremely exciting stage. We---or, rather, extremely clever physicists and engineers in well organized labs---can now actually control individual quantum systems to the extent required for quantum computers. Not on the required scale quite yet, but it's a start and we are getting there. Now, you will be wondering: Can we already perform computations that cannot be done on any of our classical supercomputers then? <br>
 
-This is precisely one of the questions I have been working on over the last years. 
-	- Architectures
-	- Xanadu
+This is precisely one of the questions I have been working on over the last years. In particular, I have worked extensively on developing so-called <i>quantum random sampling</i> schemes. Implementations of such schemes on the available hardware&mdash;so the argument&mdash;demonstrates that quantum computers are real: They are <i>really</i> hard to simulate on our classical supercomputers and we have deep reasons in complexity theory to believe that this will get exponentially harder, as we build larger and larger quantum computers.
 
-How can we characterize quantum devices and verify quantum computations? 
+
+How can we characterize quantum devices, learn their properties, and verify quantum computations? 
 ---------------------------------------------------
 
-Verifying analog and digital quantum computations
+Verification
+--- 
+
+Is it possible to verify the outcomes of a quantum computation efficiently using only classical computation? After all, we expect that no classical computer can solve all the problems that quantum computers can solve. So there is no way for us to just compare the results of two computations. This is one of the deep questions in the theory of quantum computing. We now know that this is indeed possible using a <a href="https://arxiv.org/abs/1804.01082">complicated protocol</a> designed for verifying a quantum computation done by some remote server. But is verification possible in simple scenarios, for example, when we only receive samples from the output of a quantum computation? We might also be able to exploit some uniquely quantum properties of a quantum computation, for example, that we can look at a quantum state from different angles or&mdash;technically speaking&mdash;measure it in different bases. In which scenarios is verification possible and in which scenarios is it not? What are the minimal resources required in a given scenario? 
+
+This question has brought me into the field of quantum computing to begin with and it still fascinates me today. Over the course of the past years, I have studied that question specifically in the context of analog quantum simulations and quantum random sampling. If you want to read more about it, I recommend the following two papers of mine.  
 
 	- direct certification
 	- sample complexity 
 
-Characterizing analog quantum simulators
+Characterization 
+---
+
+Closely related to the verification of quantum simulations and computations is the question, how we can most resource-efficiently <i>characterize</i> quantum devices. While in verification we are just interested in a Yes/No answer whether or not the computation succeeded, in quantum characterization we actually want to know what happened in the device. Most importantly: what, if anything, went wrong? Such answers are crucial to engineering quantum devices and making them more and more precise. What exactly we want to learn about the device will depend a lot on the specific setting. 
+
+While we have many tools available for characterizing digital computations, this is much less true for analog simulators. The setting I am currently most interested in are systems with particle-number conserving dynamics. I think of such systems as being analogous to digital quantum computations where we compose individual local gates, but now we compose the dynamics of individual particles. For a detailed study on how to characterize the dynamics of such particles in practice I recommend the following publication.  
 
 	- Hamiltonian identification and scalable learning 
 
+Learning 
+---
+
+Another notion that is closely related to verification and characterization is learning. Learning tasks can have many different goals, but what unites them is that we want to find a model that fits some data which is given to us. We don't require that this model is <i>true</i> in that it has a theoretical grounding and uniquely describes the data within our theory. Learning is intrinsically data-driven: We simply want to reproduce certain characteristic features of the data. For example, in a classification task, we might want to divide our data, say images, into different categories and then, given a new  image, decide into which category it fits. Or we might want to be able to generate new images that are similar to the ones given to us. 
+
+
+	- quantum-classical sep 
 
 What are the physical mechanisms that obstruct our simulations? 
 ---------------------------------------------------
