@@ -36,10 +36,10 @@ While we have many tools available for characterizing digital computations, this
 Learning 
 ---
 
-Another notion that is closely related to verification and characterization is learning. Learning tasks can have many different goals, but what unites them is that we want to find a model that fits some data which is given to us. We don't require that this model is <i>true</i> in that it has a theoretical grounding and uniquely describes the data within our theory. Learning is intrinsically data-driven: We simply want to reproduce certain characteristic features of the data. For example, in a classification task, we might want to divide our data, say images, into different categories and then, given a new  image, decide into which category it fits. Or we might want to be able to generate new images that are similar to the ones given to us. 
-
+Another notion that is closely related to verification and characterization is learning. Learning tasks can have many different goals, but what unites them is that we want to find a model that fits some data which is given to us. We don't require that this model is <i>true</i> in that it has a theoretical grounding and uniquely describes the data within our theory. Learning is intrinsically data-driven: We simply want to reproduce certain characteristic features of the data. For example, in a classification task, we might want to divide our data, say images, into different categories and then, given a new  image, decide into which category it fits. Or we might want to be able to generate new images that are similar to the ones given to us. An interesting question is whether quantum algorithms can be better at learning tasks than classical ones. We showed that the answer to this question is "Yes"&mdash;albeit for a very artificial task. 
 
 	- quantum-classical sep 
+	
 
 What are the physical mechanisms that obstruct our simulations? 
 ---------------------------------------------------
