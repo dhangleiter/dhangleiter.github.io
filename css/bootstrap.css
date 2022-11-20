@@ -5007,10 +5007,12 @@ details > summary {
 /*  background-color: #eeeeee;*/
 /*  border: none;*/
 /*  box-shadow: 1px 1px 2px #bbbbbb;*/
+/*  padding: 0px 15px;*/
   font-size: 20px;
   color: #ED1076;
   cursor: pointer;
 }
+
 summary:hover{
     color: #AE0046;
     text-decoration: underline;}
@@ -5027,6 +5029,10 @@ details > p {
 /*  box-shadow: 1px 1px 2px #bbbbbb;*/
 }
 
+details[open] summary {
+    padding-bottom: 10px;
+/*    border-bottom: 1px solid #aaa;*/
+}
 
 /*summary {
   list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
