@@ -77,8 +77,7 @@
           <p>
             I am a quantum scientist. 
             I work at the interface between physics, computer science, mathematics, and philosophy of science. 
-            I am currently a Quantum Postdoctoral Fellow at the <i>Simons Institute for the Theory of Computing</i> at the University of California, Berkeley. 
-            I did my Ph.D. @ <i>Freie Universität Berlin</i> in Jens Eisert's group in 2020, and was a Hartree Postdoctoral fellow @ the <i>Joint Center for Quantum Information and Computer Science</i> of the University of Maryland & NIST from 2021 until 2024.
+            I am currently a Quantum Postdoctoral Fellow at the <i>Simons Institute for the Theory of Computing</i> at the University of California, Berkeley, got my Ph.D. from <i>Freie Universität Berlin</i> in Jens Eisert's group in 2020, and was a Hartree Postdoctoral fellow @ the <i>Joint Center for Quantum Information and Computer Science</i> of the University of Maryland & NIST from 2021 until 2024.
             I studied physics, philosophy, and mathematics @ Konstanz, Oxford and Munich. <br><br>
 
             I am always happy to talk about my work and to answer any questions you might have at <a href="mailto:mail@dhangleiter.eu">mail@dhangleiter.eu</a>.
@@ -111,7 +110,7 @@
           <summary>What is the computational power of quantum systems? </summary>
         
       <p>
-        It is an insight of Paul Benioff, Richard Feynman, David Deutsch and others in the late 20th century that we can harvest precise control of quantum systems computationally: Controlled quantum devices allow for efficient simulations and computations in cases in which any classical algorithm would require exponential time. But what does that mean in practice? Today, we are at an extremely exciting stage. We&mdash;or, rather, extremely clever physicists and engineers in well organized labs&mdash;can now actually control individual quantum systems to the extent required for quantum computers. Not on the required scale quite yet, but it's a start and we are getting there. Now, you will be wondering: Can we already perform computations that cannot be done on any of our classical supercomputers then? 
+        It is an insight of Paul Benioff, Richard Feynman, David Deutsch and others in the late 20th century that we can harvest precise control of quantum systems computationally: Controlled quantum devices allow for efficient simulations and computations in cases in which any classical algorithm would require exponential time. But what does that mean in practice? Today, we are at an exciting point. We&mdash;or, rather, extremely clever physicists and engineers in well organized labs&mdash;can now actually control individual quantum systems to the extent required for quantum computers. Not on the required scale quite yet, but it's a start and we are getting there. Now, you will be wondering: Can we already perform computations that cannot be done on any of our classical supercomputers then? 
       </p>
 
       <p>
@@ -123,20 +122,25 @@
         <ul>
           <li>
           <b>Introductory overview:</b> <a href="https://arxiv.org/abs/2206.04079" target="_new" >  
-            Computational advantage of quantum random sampling (2022) 
+            Computational advantage of quantum random sampling (2023) 
           </a>
         </li>
-      
+       <li>   
+          <a href="https://arxiv.org/abs/2411.02535" target="_new">Classical Simulation of Noisy Circuits with Naturally Fault-Tolerant Gates (2024)</a> 
+        </li>
+         
         <li>   
-          <!-- <b>New proposal:</b>  -->
+          <a href="https://arxiv.org/abs/2307.14424" target="_new">Verifiable measurement-based quantum random sampling using trapped ions (2024)</a> 
+        </li>
+      <!--   <li>   
           <a href="http://arXiv.org/abs/2102.12474" target="_new">Quantum computational advantage via high-dimensional Gaussian Boson Sampling (2022)
           </a> &mdash; implemented <a href="https://www.nature.com/articles/s41586-022-04725-x">here</a>. 
-        </li>
-<!-- 
-        <li>   
-          <b> Talk: </b> <a href="https://www.youtube.com/watch?v=Cnm7XSz5VQM" target="_new">Validated quantum advantage via Bell sampling.</a> 
-        </li>
- -->        </ul>
+        </li> -->
+
+      <!--   <li>   
+          <b> Talk: </b> <a href="https://www.youtube.com/watch?v=Cnm7XSz5VQM" target="_new">Validated quantum advantage via Bell sampling.</a> (<a href="slides/23_bell_sampling_simons.pdf" target="_new">Slides</a>)
+        </li> -->
+        </ul>
       </p>
               
 
@@ -145,14 +149,28 @@
       </p>
        <p>
       <details>
-          <summary>How can we compile quantum algorithms fault-tolerantly? </summary>
+          <summary>Which quantum computations can be made naturally fault-tolerant?</summary>
         
       <p>
-       TBD
+        To make quantum computations possible in our real, dirty, and noisy world we need to protect them from this world, which destroys quantum information when left alone. 
+        To do this, we can use quantum codes which encode quantum information redundantly and in a distributed way in order to protect it from local noise processes.  
       </p>
 
       <p>
-        If you want to learn more about my work on fault-tolerant compiling of quantum algorithms, I recommend you look into the following resources.
+        But the problem is: once we have encoded quantum information as logical qubits, it is much harder to manipulate it&mdash;by design so! 
+        In fact, using only local manipulation of the logical qubits does not allow the implementation of universal quantum computation. 
+        But such transversal  operations still allow us to do classically hard computations&mdash;see <a href="https://arxiv.org/abs/2404.19005" target="_new">my work</a> with <a href="https://www.nature.com/articles/s41586-023-06927-3" target="_new" >the Harvard team</a>.
+        At the same time, different codes are suited better to different experimental platforms.
+        So maybe we can use different quantum codes with different natural operations for different computational primitives using different experimental platforms. 
+        We could then build boxes which do one thing really well. To build a universal quantum computer we can then flexibly stitch those boxes together. 
+      </p>
+
+      <p>
+        To assess this possibility, I do what we have termed "<a href="https://arxiv.org/abs/2404.19005" target="_new">fault-tolerant compiling</a>"&mdash;develop new codes with interesting natural gate sets, develop efficient implementations of quantum algorithms with natural gate sets, and develop efficient implementations on actual hardware. 
+      </p>
+
+      <p>
+        If you want to learn more about my work on fault-tolerant compiling of quantum algorithms, I recommend the following resources.
         <ul>
           <li>
           <b></b> <a href="https://www.nature.com/articles/s41586-023-06927-3" target="_new" >  
@@ -161,6 +179,10 @@
       
         <li>   
           <a href="https://arxiv.org/abs/2404.19005" target="_new">Fault-tolerant compiling of classically hard IQP circuits on hypercubes (2024).
+        </li>
+     
+        <li>   
+          <a href="https://arxiv.org/abs/2410.07595" target="_new">Geometric structure and transversal logic of quantum Reed-Muller codes (2024).
         </li>
 
         <li>   
@@ -188,17 +210,24 @@
       </p>
 
       <ul>
+
+          <li>
+          <a href="https://arxiv.org/abs/2312.10156" target="_new" >  
+            Secret extraction attacks against obfuscated IQP circuits (2024)</a> (<a href="slides/24_iqp_drama_virginia_tech.pdf" target="_new">Slides</a>)
+        </li>
+
           <li>
           <a href="https://arxiv.org/abs/1602.00703" target="_new" >  
             Direct certification of a class of quantum simulations (2017)
           </a>
         </li>
 
+<!-- 
         <li>
           <a href="https://arxiv.org/abs/1812.01023" target="_new" >  
             Sample complexity of device-independently certified "quantum supremacy" (2019)
           </a>
-        </li>
+        </li> -->
 
         <li>
           <b>Talk:</b> <a href="https://www.youtube.com/watch?v=NWOZs5mAfYk">(How) can we verify quantum supremacy? </a> 
@@ -216,7 +245,7 @@
       <ul>
         <li>
         <a href="https://arxiv.org/abs/2108.08319" target="_new" >  
-          Robustly learning the Hamiltonian dynamics of a superconducting quantum processor (2021)
+          Robustly learning the Hamiltonian dynamics of a superconducting quantum processor (2024)
         </a>
       </li>
       <li>
@@ -328,7 +357,7 @@
         </li>
 
         <li>
-          <a href="https://arxiv.org/abs/2112.01105" target="_new">How to engineer a quantum wavefunction (2021)
+          <a href="https://arxiv.org/abs/2112.01105" target="_new">How to engineer a quantum wavefunction (2023)
           </a>
         </li>
 
@@ -513,10 +542,10 @@
         <!-- <h3> Journal articles </h3> -->
         
 
-
+<!-- 
         <a href="https://arxiv.org/abs/2212.10582" target="_new" class="list-group-item">  <b> Sharp complexity phase transitions generated by entanglement </b> <i>with </i>Soumik Ghosh, Abhinav Deshpande, Alexey Gorshkov, Bill Fefferman. <br>
         <i>In </i> Phys. Rev. Lett. <b>131</b>, 030601 (2023). preprint arXiv:2212.10582.
-        </a>
+        </a> -->
 
         <a href="https://arxiv.org/abs/2108.08319" target="_new" class="list-group-item">  <b>Robustly learning the Hamiltonian dynamics of a superconducting quantum processor</b> <i>with</i> Ingo Roth, Jonáš Fuksa, Jens Eisert, Pedram Roushan. <br>
         <i> In </i> Nature Communications <b>15</b>, 9595 (2024). preprint arXiv: 2108.08319
