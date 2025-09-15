@@ -76,9 +76,8 @@
           <p></p>
           <p>
             I am a quantum scientist. 
-            I work at the interface between physics, computer science, mathematics, and philosophy of science. 
-            I am currently an Ambizione Fellow at <a href="https://qit.ethz.ch/" target="_new">ETH Zuerich</a> and a Quantum Postdoctoral fellow at the <a href="https://simons.berkeley.edu/" target="_new">Simons Institute for the Theory of Computing</a> at UC Berkeley, got my Ph.D. from <a href="https://www.physik.fu-berlin.de/en/einrichtungen/ag/ag-eisert/index.html" target="_new">FU Berlin</a> in 2020, and was a Hartree Postdoctoral fellow at <a href="https://quics.umd.edu/" target="_new">QuICS</a> of UMD & NIST from 2021 until 2024.
-            I studied physics, philosophy, and mathematics in Konstanz, Oxford and Munich. <br><br>
+            I work at the interface of computer science, physics, mathematics, and philosophy of science. 
+            I am currently an Ambizione fellow at <a href="https://qit.ethz.ch/" target="_new">ETH Zuerich</a> and a Quantum Postdoctoral fellow at the <a href="https://simons.berkeley.edu/" target="_new">Simons Institute for the Theory of Computing</a> at UC Berkeley. Previously, I was a Hartree Postdoctoral fellow at <a href="https://quics.umd.edu/" target="_new">QuICS</a> of UMD & NIST between 2021 and 2024, got my Ph.D. from <a href="https://www.physik.fu-berlin.de/en/einrichtungen/ag/ag-eisert/index.html" target="_new">FU Berlin</a> in 2020, and studied physics, philosophy, and mathematics in Konstanz, Oxford and Munich. <br><br>
 
             I am always happy to talk about my work and to answer any questions you might have at mail [at] dhangleiter [dot] eu.
           </p>
@@ -96,44 +95,50 @@
 
           <h2 id="research"><span>Research</span><span><a href="#top"><img class="uparrow" src="img/arrow.png" height=30px></a></span></h2>
       <p>
-            
-       What are the computational limitations on predicting and understanding the physical world? How are these limitations manifested in practice? Vice versa, can we harness the complexity of quantum systems as computing devices in order to overcome those limitations and learn about unknown physics? 
+        In my research I strive for a deeper understanding of quantum computation, informed by quantum complexity theory as well as the physics of real quantum devices. Roughly I try to find an answer to the following questions:
       </p>
-
-      <!-- <p>
-        These are the big guiding questions of my research.
-      </p> -->
+      <p>
+        <b>1.</b> What are the fundamental differences between quantum and classical computation? 
+        <br>
+        <b>2.</b> Are there guiding principles that delineate for which tasks there are quantum advantages? 
+        <br>
+        <b>3.</b>
+        What are the constraints imposed by the reality of quantum computing devices on quantum speedups and algorithms? 
+      </p>
+      <p>
+        To approach answers to those questions, I study the following topics in quantum computing. 
+      </p> 
       <p>
       <details>
-          <summary>What is the computational power of quantum systems? </summary>
+          <summary>Quantum advantage in random circuits</summary>
         
       <p>
-        It is an insight of Paul Benioff, Richard Feynman, David Deutsch and others in the late 20th century that we can harvest precise control of quantum systems computationally: Controlled quantum devices allow for efficient simulations and computations in cases in which any classical algorithm would require exponential time. But what does that mean in practice? Today, we are at an exciting point. We&mdash;or, rather, extremely clever physicists and engineers in well organized labs&mdash;can now actually control individual quantum systems to the extent required for quantum computers. Not on the required scale quite yet, but it's a start and we are getting there. Now, you will be wondering: Can we already perform computations that cannot be done on any of our classical supercomputers then? 
+        As the first real quantum computers emerged in the past decade, we were getting the first chances to actually <i>test</i> whether quantum speedups are physically possible. 
+        To do this, we had to find computations that were really easy to implement, required only a tiny bit of quantum computational power but yet were extremely hard to simulate for classical computers.  
+        A beautiful idea was to use <i>random circuit sampling</i> schemes to do this&mdash;you just have to run a random circuit that is natural in your architecture. 
+        In the past years, I have worked a lot on finding natural schemes that are fitted to different quantum computing architectures, and on finding deep  complexity-theoretic evidence that there is no scalable classical algorithm for this.
       </p>
 
       <p>
-        This is precisely one of the questions I have been working on over the last years. In particular, I have worked extensively on developing so-called <i>quantum random sampling</i> schemes. Implementations of such schemes on the available hardware&mdash;so the argument&mdash;demonstrates that the speedup of quantum computers is real: They are <i>really</i> hard to simulate on our classical supercomputers and we have deep reasons in complexity theory to believe that this will get exponentially harder, as we build larger and larger quantum computers.
-      </p>
-
-      <p>
-        If you want to learn more about this, I recommend the following papers of mine. 
+        To get a more concrete picture, take a look at the following papers of mine:
         <ul>
           <li>
           <b>Introductory overview:</b> <a href="https://arxiv.org/abs/2206.04079" target="_new" >  
             Computational advantage of quantum random sampling (2023) 
           </a>
         </li>
-       <li>   
-          <a href="https://arxiv.org/abs/2411.02535" target="_new">Classical Simulation of Noisy Circuits with Naturally Fault-Tolerant Gates (2024)</a> 
-        </li>
          
         <li>   
           <a href="https://arxiv.org/abs/2307.14424" target="_new">Verifiable measurement-based quantum random sampling using trapped ions (2024)</a> 
         </li>
-      <!--   <li>   
+
+          <!-- <li>   
+          <a href="https://arxiv.org/abs/2411.02535" target="_new">Classical Simulation of Noisy Circuits with Naturally Fault-Tolerant Gates (2024)</a> 
+        </li> -->
+        <li>   
           <a href="http://arXiv.org/abs/2102.12474" target="_new">Quantum computational advantage via high-dimensional Gaussian Boson Sampling (2022)
           </a> &mdash; implemented <a href="https://www.nature.com/articles/s41586-022-04725-x">here</a>. 
-        </li> -->
+        </li>
 
       <!--   <li>   
           <b> Talk: </b> <a href="https://www.youtube.com/watch?v=Cnm7XSz5VQM" target="_new">Validated quantum advantage via Bell sampling.</a> (<a href="slides/23_bell_sampling_simons.pdf" target="_new">Slides</a>)
@@ -147,11 +152,11 @@
       </p>
        <p>
       <details>
-          <summary>Which quantum computations can be made naturally fault-tolerant?</summary>
+          <summary>Computing in quantum error-correcting codes</summary>
         
       <p>
         To make quantum computations possible in our real, dirty, and noisy world we need to protect them from this world, which destroys quantum information when left alone. 
-        To do this, we can use quantum codes which encode quantum information redundantly and in a distributed way in order to protect it from local noise processes.  
+        To do this, we can use quantum error-correcting codes which encode quantum information redundantly and in a distributed way in order to protect it from local noise processes.  
       </p>
 
       <p>
@@ -160,11 +165,11 @@
         But such transversal  operations still allow us to do classically hard computations&mdash;see <a href="https://arxiv.org/abs/2404.19005" target="_new">my work</a> with <a href="https://www.nature.com/articles/s41586-023-06927-3" target="_new" >the Harvard team</a>.
         At the same time, different codes are suited better to different experimental platforms.
         So maybe we can use different quantum codes with different natural operations for different computational primitives using different experimental platforms. 
-        We could then build boxes which do one thing really well. To build a universal quantum computer we can then flexibly stitch those boxes together. 
+        We could then build different boxes each of which can do one thing really well. To build a universal quantum computer we can then flexibly stitch those boxes together. 
       </p>
 
       <p>
-        To assess this possibility, I do what we have termed "<a href="https://arxiv.org/abs/2404.19005" target="_new">fault-tolerant compiling</a>"&mdash;develop new codes with interesting natural gate sets, develop efficient implementations of quantum algorithms with natural gate sets, and develop efficient implementations on actual hardware. 
+        To assess this possibility, I do what we have termed "<a href="https://arxiv.org/abs/2404.19005" target="_new">fault-tolerant compiling</a>"&mdash;develop new codes with interesting natural gate sets,  efficient implementations of quantum algorithms with natural gate sets, and efficient implementations on actual hardware. 
       </p>
 
       <p>
@@ -172,15 +177,15 @@
         <ul>
           <li>
           <b></b> <a href="https://www.nature.com/articles/s41586-023-06927-3" target="_new" >  
-            Logical quantum processor based on reconfigurable atom arrays (2024).
+            Logical quantum processor based on reconfigurable atom arrays (2024).</a>
         </li>
       
         <li>   
-          <a href="https://arxiv.org/abs/2404.19005" target="_new">Fault-tolerant compiling of classically hard IQP circuits on hypercubes (2024).
+          <a href="https://arxiv.org/abs/2404.19005" target="_new">Fault-tolerant compiling of classically hard IQP circuits on hypercubes (2025).</a>
         </li>
      
         <li>   
-          <a href="https://arxiv.org/abs/2410.07595" target="_new">Geometric structure and transversal logic of quantum Reed-Muller codes (2024).
+          <a href="https://arxiv.org/abs/2410.07595" target="_new">Geometric structure and transversal logic of quantum Reed-Muller codes (2025).</a>
         </li>
 
         <li>   
@@ -195,7 +200,7 @@
       </p>         
       <p>
       <details>
-        <summary>How can we characterize quantum devices and verify quantum computations? </summary>
+        <summary>Characterization and verification</summary>
 
         <h4>Verification</h4>
               
@@ -204,14 +209,14 @@
       </p>
 
       <p>
-        This question has brought me into the field of quantum computing to begin with and it still fascinates me today. Over the course of the past years, I have studied that question specifically in the context of analog quantum simulations and quantum random sampling. If you want to read more about it, I recommend the following papers and talk. 
+        This question has brought me into the field of quantum computing to begin with and it still excites me today. Over the course of the past years, I have studied verification in the context of analog quantum simulations and quantum random sampling: 
       </p>
 
       <ul>
 
           <li>
-          <a href="https://arxiv.org/abs/2312.10156" target="_new" >  
-            Secret extraction attacks against obfuscated IQP circuits (2024)</a> (<a href="slides/24_iqp_drama_virginia_tech.pdf" target="_new">Slides</a>)
+          <a href="https://arxiv.org/abs/2312.10156" target="_new">  
+            Secret extraction attacks against obfuscated IQP circuits (2025)</a> (<a href="slides/24_iqp_drama_virginia_tech.pdf" target="_new">Slides</a>)
         </li>
 
           <li>
@@ -280,7 +285,7 @@
 
       <p>
       <details>
-        <summary>What are the physical mechanisms that obstruct classical simulations?  </summary>
+        <summary>The quantum sign problem</summary>
 
       <p> 
         One of the threads that weave through my research is the relation of and interplay between computing and physics. 
@@ -288,7 +293,7 @@
         But physics and the predictions we make using the physical laws also rely on computations using those devices. 
         Therefore what we can know about the physical world seems to depend crucially on what we can compute. 
         That this connection is a deep one is manifest in the <a href="https://plato.stanford.edu/entries/church-turing/">Church-Turing thesis</a> which posits that what is computable in the physical world is precisely what is computable by a Turing machine. 
-        Extending this to the claim that what is <i>efficiently computable</i> is also precisely that which is efficiently computable by a Turing machine is the content of the Extended Church-Turing thesis formulated for example by <a href="https://epubs.siam.org/doi/abs/10.1137/S0097539796300921">Bernstein & Vazirani</a>. 
+        Extending this to the claim that what is <i>efficiently computable</i> is also precisely that which is efficiently computable by a Turing machine is the content of the Extended Church-Turing thesis formulated by <a href="https://epubs.siam.org/doi/abs/10.1137/S0097539796300921">Bernstein & Vazirani</a>. 
         Quantum computing violates the extended Church-Turing thesis. 
       </p>
 
@@ -334,10 +339,10 @@
 
       <p>
       <details>
-        <summary>(How) does quantum computing impact the way we do science? </summary>
+        <summary>Philosophy of quantum science </summary>
 
         <p> 
-          In science we work towards achieving various different epistemic goals---predicting future phenomena, explaining why things are the way they are, understanding the mechanisms governing the world. In order to do so, we use many different methodologies ranging from developing theories, modelling phenomena in great detail and devising extremely simple and highly idealized 'toy' models to performing computer simulations and experiments. All of those different methodologies serve different purposes in the scientific process. For example, when developping detailed models we might primarily aim to make accurate predictions about future experiments, about the weather tomorrow, or the climate in a century. Using toy models, we might want to isolate and understand specific physical mechanisms or phenomena. 
+          In science we work towards achieving various different epistemic goals&mdash;predicting future phenomena, explaining why things are the way they are, understanding the mechanisms governing the world. In order to do so, we use many different methodologies ranging from developing theories, modelling phenomena in great detail and devising extremely simple and highly idealized 'toy' models to performing computer simulations and experiments. All of those different methodologies serve different purposes in the scientific process. For example, when developping detailed models we might primarily aim to make accurate predictions about future experiments, about the weather tomorrow, or the climate in a century. Using toy models, we might want to isolate and understand specific physical mechanisms or phenomena. 
         </p>
 
         <p>
@@ -509,13 +514,13 @@
       preprint arXiv:2501.05355
       </a>
 
-<!--       <a href = "https://arxiv.org/abs/2412.07058" target ="_new" class = "list-group-item"> <b>
+      <a href = "https://arxiv.org/abs/2412.07058" target ="_new" class = "list-group-item"> <b>
         Random regular graph states are complex at almost any depth
       </b> 
       <i> with</i> Soumik Ghosh and Jonas Helsen 
       <br>
       preprint arXiv:2412.07058
-      </a> -->
+      </a>
 <!-- 
         <a href = "https://arxiv.org/abs/2411.02535" target ="_new" class = "list-group-item"> <b>
         Polynomial-Time Classical Simulation of Noisy Circuits with Naturally Fault-Tolerant Gates
@@ -525,11 +530,12 @@
       preprint arXiv:2411.02535
       </a> -->
 
+<!-- 
          <a href="https://arxiv.org/abs/2410.08073" target="_new" class="list-group-item"><b>Efficient Quantum Pseudorandomness from Hamiltonian Phase States </b>
          <i>with</i> John Bostanci, Jonas Haferkamp, Alex Poremba<br>
         <i> In</i> Proceedings of TQC (2025). preprint arXiv:2410.08073
       </a>
-
+ -->
          <a href="https://arxiv.org/abs/2410.07595" target="_new" class="list-group-item"><b>Geometric structure and transversal logic of quantum Reed-Muller codes </b>
          <i>with</i>  Sasha Barg, Nolan Coble, Christopher Kang<br>
          <i>In</i> IEEE Transactions in Information Theory (2025). 
@@ -559,8 +565,8 @@
        </a> -->
 
        <a href="https://www.nature.com/articles/s41586-023-06927-3" target="_new" class="list-group-item">  <b> Logical quantum processor based on reconfigurable atom arrays </b> <i>with </i>
-        Dolev Bluvstein, Simon Evered, Alexandra Geim, Sophie Li, Hengyun Zhou,
-        Tom Manovitz, Sepehr Ebadi, Maddie Cain, Marcin Kalinowski, 
+        Dolev Bluvstein, Simon Evered, Alexandra Geim, Sophie Li, Hengyun Zhou, 
+        Tom Manovitz, Sepehr Ebadi, Maddie Cain, Marcin Kalinowski,  
         Pablo Bonilla Ataides, Nishad Maskara, Iris Cong, Xun Gao, Pedro Sales Rodriguez,
         Thomas Karolyshyn, Giulia Semeghini, Michael Gullans, Markus Greiner, Vladan Vuletić, Misha Lukin <br>
         <i>In </i>  Nature <b>626</b> (7997), pp. 58-65 (2024). preprint arXiv:2312.03982
@@ -611,7 +617,7 @@
         preprint arXiv:2102.12474<br>
         </a> -->
 
-        
+
 <!--         <p>
            <i>Our quantum advantage proposal has recently been implemented experimentally; see <a href="https://www.nature.com/articles/s41586-022-04725-x" target="_new">Nature <b>606</b>, 75–81 (2022)</a>.</i> 
         </p> -->
